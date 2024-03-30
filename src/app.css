@@ -1,21 +1,30 @@
-@import "@radix-ui/colors/gray.css";
-@import "@radix-ui/colors/red.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  font-family: system-ui, ui-sans-serif, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: normal;
-  background-color: var(--gray-1);
-  color: var(--gray-12);
-  font-size: 15px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+@layer utilities {
+  .text-tomato {
+    color: #d13415;
+    color: color(display-p3 0.755 0.259 0.152);
+  }
 
-#app {
-  display: flex;
-  max-width: 1280px;
-  width: 100%;
-  margin-inline: auto;
+  .bg-tomato {
+    background-color: #d13415;
+    background-color: color(display-p3 0.755 0.259 0.152);
+  }
+
+  .text-strong {
+    color: #202020;
+    color: color(display-p3 0.125 0.125 0.125);
+  }
+
+  .text-normal {
+    color: #646464;
+    color: color(display-p3 0.392 0.392 0.392);
+  }
+
+  .text-light {
+    color: #8d8d8d;
+    color: color(display-p3 0.553 0.553 0.553);
+  }
 }

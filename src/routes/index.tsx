@@ -1,29 +1,89 @@
 import { Title } from "@solidjs/meta";
-import "./index.css";
+import type { Component, JSX } from "solid-js";
+import { Dynamic } from "solid-js/web";
+import { ExternalLink } from "~/components/ExternalLink";
+import { Strong } from "~/components/Strong";
+import { GitHubIcon } from "~/components/icons/GitHubIcon";
+import { UniversityIcon } from "~/components/icons/UniversityIcon";
+import { XComIcon } from "~/components/icons/XComIcon";
 
 export default function Home() {
   return (
     <main>
       <Title>rev4324</Title>
-      <div role="presentation" class="bar"></div>
+      {/* <div role="presentation" class="bg-red-700 h-4 w-full"></div> */}
 
-      <div>
-        <h1>rev4324</h1>
+      <div class="mx-auto max-w-screen-lg p-8">
+        <header>
+          <h1 class="text-2xl font-mono font-medium text-tomato tracking-wide">
+            @rev4324
+          </h1>
+        </header>
 
-        <ul class="list">
-          <li>
-            <a class="link">GitHub</a>
-          </li>
+        <section class="pt-6 max-w-prose text-normal space-y-2">
+          <p>
+            My name is <Strong>Filip Dembicki</Strong> and I'm a junior
+            developer from Toruń, Poland working at{" "}
+            <Strong>
+              <ExternalLink href="https://exea.pl">EXEA</ExternalLink>
+            </Strong>
+            .
+          </p>
 
-          <li>
-            <a class="link">X.com (formerly Twitter)</a>
-          </li>
+          <p>
+            I specialize in crafting great <Strong>user interfaces</Strong> on
+            the web. I'm also proficient in several backend technologies and I
+            think server-side rendering is the best way to create{" "}
+            <Strong>performant</Strong> websites.
+          </p>
+        </section>
 
-          <li>
-            <a class="link">Telegram</a>
-          </li>
-        </ul>
+        <section class="py-5">
+          <ul class="flex flex-col gap-1">
+            <Li
+              href="https://github.com/rev4324"
+              icon={GitHubIcon}
+              label="GitHub"
+              description="kinda empty..."
+            />
+
+            <Li
+              href="https://x.com/rev4324"
+              icon={XComIcon}
+              label="X (formerly Twitter)"
+            />
+
+            <Li
+              href="https://www.ncu.eu"
+              icon={UniversityIcon}
+              label="CS at Nicolaus Copernicus University in Toruń"
+              description="4th semester"
+            />
+          </ul>
+        </section>
+
+        <footer class="text-light text-sm">&copy; 2024</footer>
       </div>
     </main>
+  );
+}
+
+function Li(props: {
+  href: string;
+  icon: Component<JSX.IntrinsicElements["svg"]>;
+  label: string;
+  description?: string;
+}) {
+  return (
+    <li>
+      <a
+        href={props.href}
+        class="inline-flex flex-row items-center gap-1.5 text-strong hover:text-tomato group transition-colors"
+      >
+        <Dynamic component={props.icon} class="size-5" />
+        <span>{props.label}</span>
+        <span class="text-light">{props.description}</span>
+      </a>
+    </li>
   );
 }
