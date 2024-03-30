@@ -1,0 +1,21 @@
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/red.css";
+
+body {
+  font-family: system-ui, ui-sans-serif, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: normal;
+  background-color: var(--gray-1);
+  color: var(--gray-12);
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#app {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+}
