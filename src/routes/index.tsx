@@ -20,7 +20,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <section class="pt-6 max-w-prose text-normal space-y-2">
+        <section class="pt-6 max-w-prose text-normal space-y-4">
           <p>
             My name is <Strong>Filip Dembicki</Strong> and I'm a junior
             developer from Toruń, Poland working at{" "}
@@ -78,11 +78,18 @@ function Li(props: {
     <li>
       <a
         href={props.href}
-        class="inline-flex flex-row items-center gap-1.5 text-strong hover:text-tomato group transition-colors"
+        class="inline-flex flex-row items-baseline gap-2 text-strong hover:text-tomato group transition-colors"
       >
-        <Dynamic component={props.icon} class="size-5" />
-        <span>{props.label}</span>
-        <span class="text-light">{props.description}</span>
+        <Dynamic
+          component={props.icon}
+          class="size-5 shrink-0 top-1 relative"
+        />
+        <div class="inline-flex flex-col sm:flex-row sm:gap-1.5">
+          <span>{props.label}</span>
+          <span class="text-light text-sm sm:text-base">
+            {props.description}
+          </span>
+        </div>
       </a>
     </li>
   );
