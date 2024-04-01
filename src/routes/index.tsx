@@ -11,13 +11,14 @@ export default function Home() {
   return (
     <main>
       <Title>rev4324</Title>
-      {/* <div role="presentation" class="bg-red-700 h-4 w-full"></div> */}
+      <div
+        role="presentation"
+        class="absolute inset-0 z-10 h-[20vh] bg-gradient-to-bl from-tomatoRgb/20 via-transparent to-transparent"
+      />
 
-      <div class="mx-auto max-w-screen-lg p-8">
+      <div class="mx-auto max-w-max px-6 py-8 z-20 relative">
         <header>
-          <h1 class="text-2xl font-mono font-medium text-tomato tracking-wide">
-            @rev4324
-          </h1>
+          <h1 class="text-2xl font-mono text-tomato tracking-wide">@rev4324</h1>
         </header>
 
         <section class="pt-6 max-w-prose text-normal space-y-4">
