@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Geist Sans Variable";
+  src: url("/fonts/geist-sans/Geist-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Geist Mono Variable";
+  src: url("/fonts/geist-mono/GeistMono-Variable.woff2") format("woff2");
+}
+
 @layer utilities {
   .text-tomato {
     color: #d13415;
