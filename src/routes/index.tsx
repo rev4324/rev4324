@@ -9,7 +9,7 @@ import { XComIcon } from "~/components/icons/XComIcon";
 
 export default function Home() {
   return (
-    <main>
+    <main class="tracking-[-0.009em]">
       <Title>rev4324</Title>
       <div
         role="presentation"
@@ -18,7 +18,7 @@ export default function Home() {
 
       <div class="mx-auto max-w-max px-6 py-8 z-20 relative">
         <header>
-          <h1 class="text-2xl font-mono text-tomato tracking-wide">@rev4324</h1>
+          <h1 class="text-2xl text-tomato font-light font-mono">@rev4324</h1>
         </header>
 
         <section class="pt-6 max-w-prose text-normal space-y-4">
